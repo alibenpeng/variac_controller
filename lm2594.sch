@@ -1,0 +1,223 @@
+EESchema Schematic File Version 4
+LIBS:exhaust_control-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:LM2594HVM-3.3 U4
+U 1 1 5B463B19
+P 5800 3650
+F 0 "U4" H 5800 4017 50  0000 C CNN
+F 1 "LM2594HVM-3.3" H 5800 3926 50  0000 C CNN
+F 2 "alis_parts:SOIC-8-1EP_3.9x4.9mm_Pitch1.27mm" H 6000 3400 50  0001 L CIN
+F 3 "/home/ali/src/kicad/projects/reservoir_controller/datasheets/lm2594hv.pdf" H 5800 3750 50  0001 C CNN
+	1    5800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5B506C9A
+P 4700 3700
+F 0 "C1" H 4818 3746 50  0000 L CNN
+F 1 "68uF" H 4818 3655 50  0000 L CNN
+F 2 "alis_parts:CP_Tantalum_Case-C_EIA-6032-28_Reflow" H 4738 3550 50  0001 C CNN
+F 3 "~" H 4700 3700 50  0001 C CNN
+	1    4700 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5B506D18
+P 7150 3800
+F 0 "C2" H 7268 3846 50  0000 L CNN
+F 1 "120uF" H 7268 3755 50  0000 L CNN
+F 2 "alis_parts:CP_Tantalum_Case-D_EIA-7343-31_Reflow" H 7188 3650 50  0001 C CNN
+F 3 "~" H 7150 3800 50  0001 C CNN
+	1    7150 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5B506DBE
+P 6650 3650
+F 0 "L1" V 6472 3650 50  0000 C CNN
+F 1 "100uH" V 6563 3650 50  0000 C CNN
+F 2 "alis_parts:Choke_SMD_7.3x7.3_H4.5" H 6650 3650 50  0001 C CNN
+F 3 "~" H 6650 3650 50  0001 C CNN
+	1    6650 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N5817 D2
+U 1 1 5B506F2D
+P 6350 3850
+F 0 "D2" V 6304 3929 50  0000 L CNN
+F 1 "1N5817" V 6395 3929 50  0000 L CNN
+F 2 "alis_parts:D_SMA" H 6350 3850 50  0001 C CNN
+F 3 "" H 6350 3850 50  0001 C CNN
+	1    6350 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L fb20-5v0.2:GND #SUPPLY0104
+U 1 1 5B506FB6
+P 6350 4200
+F 0 "#SUPPLY0104" H 6350 4200 50  0001 L BNN
+F 1 "GND" H 6350 4077 50  0000 C CNN
+F 2 "" H 6350 4200 50  0001 C CNN
+F 3 "" H 6350 4200 50  0001 C CNN
+	1    6350 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L fb20-5v0.2:GND #SUPPLY0105
+U 1 1 5B506FD2
+P 7150 4200
+F 0 "#SUPPLY0105" H 7150 4200 50  0001 L BNN
+F 1 "GND" H 7150 4077 50  0000 C CNN
+F 2 "" H 7150 4200 50  0001 C CNN
+F 3 "" H 7150 4200 50  0001 C CNN
+	1    7150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L fb20-5v0.2:GND #SUPPLY0106
+U 1 1 5B506FE7
+P 4700 4200
+F 0 "#SUPPLY0106" H 4700 4200 50  0001 L BNN
+F 1 "GND" H 4700 4077 50  0000 C CNN
+F 2 "" H 4700 4200 50  0001 C CNN
+F 3 "" H 4700 4200 50  0001 C CNN
+	1    4700 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L fb20-5v0.2:GND #SUPPLY0107
+U 1 1 5B506FFC
+P 5200 4200
+F 0 "#SUPPLY0107" H 5200 4200 50  0001 L BNN
+F 1 "GND" H 5200 4077 50  0000 C CNN
+F 2 "" H 5200 4200 50  0001 C CNN
+F 3 "" H 5200 4200 50  0001 C CNN
+	1    5200 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4100 5200 3650
+Wire Wire Line
+	5200 3650 5400 3650
+Wire Wire Line
+	4700 3550 5400 3550
+Wire Wire Line
+	4700 3850 4700 4000
+Wire Wire Line
+	6800 3650 7150 3650
+Wire Wire Line
+	7150 3950 7150 4100
+Wire Wire Line
+	6200 3550 7150 3550
+Wire Wire Line
+	7150 3550 7150 3650
+Connection ~ 7150 3650
+$Comp
+L power:+12V #PWR0114
+U 1 1 5B5071E7
+P 4700 3300
+F 0 "#PWR0114" H 4700 3150 50  0001 C CNN
+F 1 "+12V" H 4715 3473 50  0000 C CNN
+F 2 "" H 4700 3300 50  0001 C CNN
+F 3 "" H 4700 3300 50  0001 C CNN
+	1    4700 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0118
+U 1 1 5B50723B
+P 7150 3300
+F 0 "#PWR0118" H 7150 3150 50  0001 C CNN
+F 1 "+3.3V" H 7165 3473 50  0000 C CNN
+F 2 "" H 7150 3300 50  0001 C CNN
+F 3 "" H 7150 3300 50  0001 C CNN
+	1    7150 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3300 7150 3550
+Connection ~ 7150 3550
+Wire Wire Line
+	4700 3300 4700 3550
+Connection ~ 4700 3550
+$Comp
+L fb20-5v0.2:GND #SUPPLY0108
+U 1 1 5B5073E1
+P 6000 4200
+F 0 "#SUPPLY0108" H 6000 4200 50  0001 L BNN
+F 1 "GND" H 6000 4077 50  0000 C CNN
+F 2 "" H 6000 4200 50  0001 C CNN
+F 3 "" H 6000 4200 50  0001 C CNN
+	1    6000 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4100 6000 3950
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5B508ABC
+P 4050 3650
+F 0 "J6" H 3970 3325 50  0000 C CNN
+F 1 "Conn_01x02-conn" H 3970 3416 50  0000 C CNN
+F 2 "alis_parts:Pin_Header_Straight_1x02_Pitch2.54mm" H 4050 3650 50  0001 C CNN
+F 3 "" H 4050 3650 50  0001 C CNN
+	1    4050 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 3550 4700 3550
+Wire Wire Line
+	4250 3650 4250 4000
+Wire Wire Line
+	4250 4000 4700 4000
+Connection ~ 4700 4000
+Wire Wire Line
+	4700 4000 4700 4100
+Wire Wire Line
+	5600 3950 5600 4100
+Wire Wire Line
+	5600 4100 5700 4100
+Connection ~ 6000 4100
+Wire Wire Line
+	5700 3950 5700 4100
+Connection ~ 5700 4100
+Wire Wire Line
+	5700 4100 5800 4100
+Wire Wire Line
+	5800 3950 5800 4100
+Connection ~ 5800 4100
+Wire Wire Line
+	5800 4100 5900 4100
+Wire Wire Line
+	5900 3950 5900 4100
+Connection ~ 5900 4100
+Wire Wire Line
+	5900 4100 6000 4100
+Wire Wire Line
+	6200 3650 6350 3650
+Wire Wire Line
+	6350 3700 6350 3650
+Connection ~ 6350 3650
+Wire Wire Line
+	6350 3650 6500 3650
+Wire Wire Line
+	6350 4000 6350 4100
+$EndSCHEMATC

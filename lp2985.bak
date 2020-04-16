@@ -1,0 +1,162 @@
+EESchema Schematic File Version 4
+LIBS:exhaust_control-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4700 3300 5050 3300
+Connection ~ 5050 3300
+Wire Wire Line
+	5050 3500 5200 3500
+Connection ~ 5200 4350
+Wire Wire Line
+	5200 4250 5200 4350
+Wire Wire Line
+	5200 3800 5200 3950
+Wire Wire Line
+	6800 4350 6800 3600
+Connection ~ 6000 4350
+Wire Wire Line
+	6000 4300 6000 4350
+Wire Wire Line
+	4700 4350 5200 4350
+Wire Wire Line
+	4700 3600 4700 4350
+$Comp
+L Device:C C2
+U 1 1 571EB9EE
+P 5200 4100
+F 0 "C2" H 5315 4146 50  0000 L CNN
+F 1 "10n" H 5315 4054 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 5238 3950 50  0001 C CNN
+F 3 "" H 5200 4100 50  0000 C CNN
+	1    5200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 571EB9F5
+P 4700 3450
+F 0 "C1" H 4815 3496 50  0000 L CNN
+F 1 "1u" H 4815 3404 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4738 3300 50  0001 C CNN
+F 3 "" H 4700 3450 50  0000 C CNN
+	1    4700 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 571EB9FC
+P 6800 3450
+F 0 "C3" H 6915 3496 50  0000 L CNN
+F 1 "2.2u" H 6915 3404 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6838 3300 50  0001 C CNN
+F 3 "" H 6800 3450 50  0000 C CNN
+	1    6800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 571EBA03
+P 6000 4400
+F 0 "#PWR0114" H 6000 4150 50  0001 C CNN
+F 1 "GND" H 6008 4226 50  0000 C CNN
+F 2 "" H 6000 4400 50  0000 C CNN
+F 3 "" H 6000 4400 50  0000 C CNN
+	1    6000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L alis_parts:LP2985LV U4
+U 1 1 571EBA09
+P 6000 3600
+F 0 "U4" H 6000 4166 50  0000 C CNN
+F 1 "LP2985LV" H 6000 4074 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 6000 3600 50  0001 C CNN
+F 3 "" H 6000 3600 50  0000 C CNN
+	1    6000 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3500 5050 3300
+Wire Wire Line
+	5050 3300 5200 3300
+Wire Wire Line
+	5200 4350 6000 4350
+Wire Wire Line
+	6000 4350 6000 4400
+Wire Wire Line
+	6000 4350 6800 4350
+$Comp
+L power:+3.3V #PWR0118
+U 1 1 5B79F11F
+P 6800 3050
+F 0 "#PWR0118" H 6800 2900 50  0001 C CNN
+F 1 "+3.3V" H 6815 3223 50  0000 C CNN
+F 2 "" H 6800 3050 50  0001 C CNN
+F 3 "" H 6800 3050 50  0001 C CNN
+	1    6800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0120
+U 1 1 5B79F169
+P 4700 3000
+F 0 "#PWR0120" H 4700 2850 50  0001 C CNN
+F 1 "+5V" H 4715 3173 50  0000 C CNN
+F 2 "" H 4700 3000 50  0001 C CNN
+F 3 "" H 4700 3000 50  0001 C CNN
+	1    4700 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3000 4700 3300
+Connection ~ 4700 3300
+Wire Wire Line
+	6800 3050 6800 3300
+Connection ~ 6800 3300
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5BD7080F
+P 3150 3350
+F 0 "J6" H 3230 3342 50  0000 L CNN
+F 1 "Conn_01x02" H 3230 3251 50  0000 L CNN
+F 2 "alis_parts:Pin_Header_Straight_1x02_Pitch2.54mm" H 3150 3350 50  0001 C CNN
+F 3 "~" H 3150 3350 50  0001 C CNN
+	1    3150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0121
+U 1 1 5BD70DE9
+P 2950 3350
+F 0 "#PWR0121" H 2950 3200 50  0001 C CNN
+F 1 "+5V" H 2965 3523 50  0000 C CNN
+F 2 "" H 2950 3350 50  0001 C CNN
+F 3 "" H 2950 3350 50  0001 C CNN
+	1    2950 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 5BD71F7E
+P 2950 3450
+F 0 "#PWR0122" H 2950 3200 50  0001 C CNN
+F 1 "GND" H 2958 3276 50  0000 C CNN
+F 2 "" H 2950 3450 50  0000 C CNN
+F 3 "" H 2950 3450 50  0000 C CNN
+	1    2950 3450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

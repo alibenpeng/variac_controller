@@ -1,0 +1,107 @@
+EESchema Schematic File Version 4
+LIBS:exhaust_control-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x04 J7
+U 1 1 5B671BB8
+P 6550 3950
+F 0 "J7" H 6630 3942 50  0000 L CNN
+F 1 "Conn_01x04" H 6630 3851 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 6550 3950 50  0001 C CNN
+F 3 "~" H 6550 3950 50  0001 C CNN
+	1    6550 3950
+	1    0    0    -1  
+$EndComp
+Text HLabel 5650 3950 0    50   Input ~ 0
+I2C_SDA
+Text HLabel 5650 4050 0    50   Input ~ 0
+I2C_SCL
+Wire Wire Line
+	5650 3950 5850 3950
+Wire Wire Line
+	6350 4050 6100 4050
+$Comp
+L Device:R R3
+U 1 1 5B671CDD
+P 5850 3650
+F 0 "R3" H 5920 3696 50  0000 L CNN
+F 1 "2k2" H 5920 3605 50  0000 L CNN
+F 2 "alis_parts:R_0603" V 5780 3650 50  0001 C CNN
+F 3 "~" H 5850 3650 50  0001 C CNN
+	1    5850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5B671D2D
+P 6100 3650
+F 0 "R4" H 6170 3696 50  0000 L CNN
+F 1 "2k2" H 6170 3605 50  0000 L CNN
+F 2 "alis_parts:R_0603" V 6030 3650 50  0001 C CNN
+F 3 "~" H 6100 3650 50  0001 C CNN
+	1    6100 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3850 6350 3200
+Wire Wire Line
+	6350 3200 6100 3200
+Wire Wire Line
+	5850 3200 5850 3500
+Wire Wire Line
+	6100 3500 6100 3200
+Connection ~ 6100 3200
+Wire Wire Line
+	6100 3200 5850 3200
+Wire Wire Line
+	5850 3800 5850 3950
+Connection ~ 5850 3950
+Wire Wire Line
+	5850 3950 6350 3950
+Wire Wire Line
+	6100 3800 6100 4050
+Connection ~ 6100 4050
+Wire Wire Line
+	6100 4050 5650 4050
+Wire Wire Line
+	6350 4150 6100 4150
+Wire Wire Line
+	6100 4150 6100 4400
+$Comp
+L fb20-5v0.2:GND #SUPPLY0109
+U 1 1 5B671EC0
+P 6100 4500
+F 0 "#SUPPLY0109" H 6100 4500 50  0001 L BNN
+F 1 "GND" H 6100 4377 50  0000 C CNN
+F 2 "" H 6100 4500 50  0001 C CNN
+F 3 "" H 6100 4500 50  0001 C CNN
+	1    6100 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0119
+U 1 1 5B671F00
+P 6100 3050
+F 0 "#PWR0119" H 6100 2900 50  0001 C CNN
+F 1 "+3.3V" H 6115 3223 50  0000 C CNN
+F 2 "" H 6100 3050 50  0001 C CNN
+F 3 "" H 6100 3050 50  0001 C CNN
+	1    6100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3050 6100 3200
+$EndSCHEMATC
